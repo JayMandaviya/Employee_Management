@@ -1,0 +1,222 @@
+{
+	"info": {
+		"_postman_id": "e6560e8e-a981-446e-929d-9be3ac35b7bc",
+		"name": "Employee Management API",
+		"description": "Collection of endpoints for managing employee records.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19895178"
+	},
+	"item": [
+		{
+			"name": "Create Employee",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46cGFzc3dvcmQ=",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Sonu Mandaviya\",\n  \"email\": \"sonu@example.com\",\n  \"password\":\"123456\",\n  \"designation\": \"Software Engineer\",\n  \"department\": \"Sales\",\n  \"joiningDate\": \"2024-09-01\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/employees/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"employees",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Employee Details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJqYXlAZXhhbXBsZS5jb20iLCJpYXQiOjE3MjUyODg2ODEsImV4cCI6MTcyNTI5MjI4MX0.-iguiDQwOFGA0T1tZqWXh6ZLek2otPHq27BGzJnAS2g",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/employees/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"employees",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Employee",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJqYXlAZXhhbXBsZS5jb20iLCJpYXQiOjE3MjUyODg2ODEsImV4cCI6MTcyNTI5MjI4MX0.-iguiDQwOFGA0T1tZqWXh6ZLek2otPHq27BGzJnAS2g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Sonu\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/employees/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"employees",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Employee",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJqYXlAZXhhbXBsZS5jb20iLCJpYXQiOjE3MjUyODg2ODEsImV4cCI6MTcyNTI5MjI4MX0.-iguiDQwOFGA0T1tZqWXh6ZLek2otPHq27BGzJnAS2g",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/employees/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"employees",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Employees",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJqYXlAZXhhbXBsZS5jb20iLCJpYXQiOjE3MjUyODkwNDUsImV4cCI6MTcyNTI5MjY0NX0.jq2ZXhNTw173cAJUOVUOIQ_N938QFQkbbsb_TYTMisQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/employees?department=IT",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"employees"
+					],
+					"query": [
+						{
+							"key": "department",
+							"value": "IT"
+						},
+						{
+							"key": "designation",
+							"value": "Software Engineer",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Employees By Admin",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46cGFzc3dvcmQ="
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/employeeListByAdmin/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"employeeListByAdmin",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"jay@example.com\",\n    \"password\":\"123456\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/api/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
